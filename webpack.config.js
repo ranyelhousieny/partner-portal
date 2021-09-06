@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'development',
   devServer: {
-    port:8000
+    port: 8000,
   },
   module: {
     rules: [
@@ -41,7 +41,12 @@ module.exports = {
         name: 'PartnerPortal',
         filename:
           'remoteEntry.js',
-      }),
+        remotes: {
+          ProductsMicrofrontend:
+            'ProductsMicrofrontend@http://localhost:8001/remoteentry.js',
+        },
+      }
+    ),
     new HtmlWebpackPlugin({
       template:
         './public/index.html',
