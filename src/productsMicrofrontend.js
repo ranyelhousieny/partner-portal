@@ -7,20 +7,21 @@ const ProductsMicrofrontend =
     )
   );
 
-const template = (
-  <div>
-    <h1>Partner Portal</h1>
+function PartnerMicrofrontend() {
+  return (
     <div>
-      <React.Suspense>
-        <ProductsMicrofrontend />
-      </React.Suspense>
+      <h1>
+        {' '}
+        ProductsMicrofrontend
+        in PartnerPortal
+      </h1>
+      <div>
+        <React.Suspense>
+          <ProductsMicrofrontend />
+        </React.Suspense>
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
-ReactDOM.render(
-  template,
-  document.querySelector(
-    '#fromjs'
-  )
-);
+export default PartnerMicrofrontend;
