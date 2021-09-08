@@ -44,6 +44,8 @@ module.exports = {
         remotes: {
           ProductsMicrofrontend:
             'ProductsMicrofrontend@http://localhost:8001/remoteEntry.js',
+          EventsMicrofrontend:
+            'EventsMicrofrontend@http://localhost:8002/remoteEntry.js',
         },
       }
     ),
